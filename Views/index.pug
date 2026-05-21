@@ -1,0 +1,50 @@
+doctype html
+html(lang="pt-br")
+  head
+    meta(charset="UTF-8")
+    title Diário de Bordo: CRUD
+    link(rel="stylesheet", href="/style.css")
+  body
+    nav
+      a(href="/") 🏠 Início
+      a(href="/create") ➕ Novo Cliente
+      a(href="/sobre") 📝 Sobre a Aula
+    
+    header
+      h1 Caderno de Anotações: Back-end
+      p Atividade Prática: Construindo e finalizando um sistema CRUD (Create, Read, Update, Delete).
+
+    main
+      //- Nossa nova Barra de Pesquisa
+      .search-container
+        form(role="search" method="GET" action="/search")
+          input#busca(type="text" name="busca" placeholder="Digite o nome do cliente que deseja buscar...")
+          button(type="submit") 🔍 Pesquisar
+
+      .card
+        h2 📋 Lista de Clientes
+        
+        //- O Pug verifica se a lista de clientes existe e não está vazia
+        if clients && clients.length > 0
+          table.tabela-aqua
+            thead
+              tr
+                th ID
+                th Nome
+                th Email
+                th Ações
+            tbody
+              //- Aqui acontece a mágica: o Pug repete o bloco abaixo para cada cliente!
+              each client in clients
+                tr
+                  td= client.id
+                  td= client.nome
+                  td= client.email
+                  td.acoes
+                    a.btn-edit(href=`/edit/${client.id}`) ✏️ Editar
+                    a.btn-del(href=`/del/${client.id}` onclick="return confirm('Tem certeza que deseja excluir?');") 🗑️ Excluir
+        else
+          p.aviso 🕵️ Nenhum cliente encontrado na nossa base de dados.
+        
+    footer
+      p &copy; 2026 - Anotações da Aula de Back-end

@@ -1,0 +1,24 @@
+doctype html
+html(lang="pt-br")
+  head
+    meta(charset='utf-8')
+    title Novo Cliente - Diário de Bordo
+    link(rel="stylesheet", href="/style.css")
+  body
+    nav
+      a(href="/") 🏠 Início
+      a(href="/create") ➕ Novo Cliente
+      a(href="/sobre") 📝 Sobre a Aula
+
+    main.card.form-card
+      h2 ➕ Adicionar Novo Cliente
+      form(role='form' method='POST' action='/create')
+        .form-group
+          label(for='nome') Nome:
+          input#name(type='text', placeholder='Digite o nome do cliente' name='nome' required)
+        
+        .form-group
+          label(for='email') Email:
+          input#email(type='email', placeholder='cliente@email.com' name='email' required)
+        
+        button(type="submit") Salvar Cliente

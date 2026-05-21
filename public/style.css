@@ -1,0 +1,200 @@
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #e0f7fa; /* Fundo Aqua clarinho */
+  color: #004d40; /* Texto em Verde/Azul bem escuro para facilitar a leitura */
+  margin: 0;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+nav { 
+  margin-bottom: 2rem; 
+  display: flex; 
+  gap: 1rem; 
+}
+
+nav a { 
+  text-decoration: none; 
+  color: #00838f; 
+  font-weight: bold; 
+  padding: 0.6rem 1.2rem;
+  background-color: #b2ebf2;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover { 
+  background-color: #80deea; 
+  transform: translateY(-2px);
+}
+
+header { 
+  margin-bottom: 2rem; 
+  border-bottom: 3px dashed #b2ebf2; 
+  padding-bottom: 1rem; 
+}
+
+/* --- Estilos da Nova Barra de Pesquisa --- */
+.search-container {
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 131, 143, 0.1); /* Sombra Aqua suave */
+}
+
+.search-container form {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 2px solid #b2ebf2;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-container input:focus { 
+  border-color: #00acc1; 
+}
+
+.search-container button {
+  padding: 0.8rem 1.5rem;
+  background-color: #00acc1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.search-container button:hover { 
+  background-color: #00838f; 
+}
+
+/* --- Estilos dos Cards --- */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 131, 143, 0.1);
+}
+
+.aviso {
+  color: #00acc1;
+  font-style: italic;
+  font-weight: bold;
+}
+
+footer { 
+  margin-top: 3rem; 
+  font-size: 0.9rem; 
+  color: #00838f; 
+  text-align: center; 
+  font-weight: bold;
+}
+
+/* --- Estilos de Formulários (Create / Edit) --- */
+.form-card {
+  max-width: 500px; /* Deixa o formulário mais estreito e centralizado */
+  margin: 0 auto;
+}
+
+.form-card h2 {
+  color: #00838f;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px dashed #b2ebf2;
+  padding-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #006064;
+}
+
+.form-group input {
+  padding: 0.8rem 1rem;
+  border: 2px solid #b2ebf2;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fafbfc;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #00acc1;
+  background-color: white;
+}
+
+.form-card button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #00acc1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+.form-card button:hover {
+  background-color: #00838f;
+  transform: translateY(-2px);
+}
+
+/* --- Estilos da Tabela Aqua --- */
+.tabela-aqua {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tabela-aqua th, .tabela-aqua td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #b2ebf2;
+}
+
+.tabela-aqua th {
+  background-color: #00acc1;
+  color: white;
+  font-weight: bold;
+}
+
+.tabela-aqua tr:hover {
+  background-color: #e0f7fa; /* Efeito hover clarinho */
+}
+
+.acoes {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-edit, .btn-del {
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.btn-edit { background-color: #ffd54f; color: #333; }
+.btn-del { background-color: #ef5350; color: white; }

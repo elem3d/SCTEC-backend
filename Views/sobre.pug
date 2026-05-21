@@ -1,0 +1,35 @@
+doctype html
+html(lang="pt-br")
+  head
+    meta(charset="UTF-8")
+    title Sobre a Aula - Diário de Bordo
+    link(rel="stylesheet", href="/style.css")
+  body
+    nav
+      a(href="/") 🏠 Início
+      a(href="/create") ➕ Novo Cliente
+      a(href="/sobre") 📝 Sobre a Aula
+    
+    main.card
+      h1 📝 Sobre esta Atividade Prática
+      p Este espaço foi transformado em um diário de bordo e laboratório de testes para as aulas de Desenvolvimento Back-end. O foco aqui é aprender errando, investigando os terminais e entendendo os bastidores da web.
+      
+      p O objetivo principal do projeto é consolidar o funcionamento de um ecossistema **CRUD** completo, integrando o servidor com um banco de dados relacional.
+
+      h2 🛠️ Tecnologias e Conceitos Aplicados:
+      ul
+        li 
+          strong Node.js & TypeScript: 
+          | Criação de um ambiente de execução seguro, tipado e moderno para o ecossistema Javascript.
+        li 
+          strong Express: 
+          | O coração do nosso back-end, responsável por gerenciar rotas dinâmicas, verbos HTTP (GET/POST) e arquivos estáticos.
+        li 
+          strong Sequelize & MySQL: 
+          | Manipulação e persistência de dados utilizando um ORM para conectar e interagir com tabelas de forma automatizada.
+        li 
+          strong Pug (View Engine): 
+          | Criação de interfaces dinâmicas renderizadas diretamente pelo servidor antes de chegarem ao navegador.
+
+      h2 🧠 Lições Aprendidas na Marra:
+      p Durante o desenvolvimento, foi compreendida a importância crucial da ordem de execução no Express (como middlewares estáticos devem vir antes de rotas dinâmicas) e a necessidade de sincronizar perfeitamente as etiquetas dos formulários (Pug) com as colunas do banco de dados (MySQL).
